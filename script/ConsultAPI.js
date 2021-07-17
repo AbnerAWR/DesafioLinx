@@ -11,12 +11,12 @@ function Get(){
 
         json.products.map(function(products){
             container.innerHTML += `
-                <strong> `+ products.id +` </strong>
-                <strong> `+ products.name +` </strong>
-                <strong> `+ products.description +` </strong>
-                <div> <img src="https:` + products.image + `"> </div>
-                <strong> De: R$`+ products.oldPrice +` </strong>
-                <strong> Por: R$ `+ products.price +` </strong><br>
+                <span> `+ products.id +` </span><br>
+                <strong> `+ products.name +` </strong><br>
+                <span> `+ products.description +` </span><br>
+                <div> <img src="https:` + products.image + `"> </div><br>
+                <span> De: R$`+ products.oldPrice +` </span>
+                <span> Por: R$ `+ products.price +` </span><br>
             `;
 
         });
@@ -31,5 +31,3 @@ function showProduct(product){
 function Main(){
     
 }
-
-Get();
