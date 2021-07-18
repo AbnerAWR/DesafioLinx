@@ -23,6 +23,7 @@ function Get(){
 
     });
 }
+Get();
 
 function showProduct(product){
 

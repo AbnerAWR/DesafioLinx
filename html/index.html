@@ -6,22 +6,62 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
-    
 
+<style>
+
+    header {
+        background: #707070 0% 0% no-repeat padding-box;
+        border: 1px solid #707070;
+        opacity: 1;
+    }
+
+    footer {
+        margin-top: 50px;
+        height: 293px; 
+        background: #707070 0% 0% no-repeat padding-box;
+        border: 1px solid #707070;
+        opacity: 1;
+    }
+
+    a.button {
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+
+    text-decoration: none;
+    color: initial;
+}
+
+
+</style>
+
+<header class="header">
     <p>uma seleção de produtos</p>
 
     <h1>especial para você</h1>
 
     <p>Todos os produtos desta lista foram selecionados a partir da sua navegação. Aproveite!</p>
 
-    <button>Conheça a Linx</button>
-    <button>Ajude o algorítimo</button>
-    <button>Seus produtos</button>
-    <button>Compartilhe</button>
+    <button onclick="location.href='https://www.linx.com.br/quem-somos/'" type="button">Conheça a Linx</button>
+    <a href="#id-ajudeOAlgoritimo">Ajude o algorítimo</a>
+    <a href="#id-seusProdutos">Seus produtos</a>
+    <a href="#id-compartilhe">Compartilhe</a>
 
+
+</header>
+<body>
+
+    <!-- Seguir
+    [x] CSS simples
+    [x] Funcionalidade de enviar email
+    [ ] Aparecer o produtos em grid
+    [ ] Botão mostrar mais
+    [ ] CSS Bonito
+    -->
 
     <!-- corpo -->
+
+    <!-- GRID 2 -->
     <h5>Ajude o algorítimo a ser mais certeiro</h5>
 
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ultricies tellus nec mi porta convallis sollicitudin eu urna. 
@@ -32,12 +72,22 @@
     Suspendisse quis lorem ultricies, pulvinar purus sed, egestas erat. Etiam ultricies a ante vehicula pharetra. 
     Quisque ut neque mattis, consequat velit ut, ultrices orci. Nulla varius elementum erat vel pharetra. Aenean sit amet nisi diam. 
     Morbi viverra, magna ac luctus commodo, odio ante suscipit libero, at mattis augue est vel metus.</p>
+    
+    <p>Seu nome:</p>
+    <input type="">
+    <p>E-mail:</p>
+    <input type="">
+    <p>CPF:</p>
+    <input type="">
 
-    <input type="">
-    <input type="">
-    <input type="">
+    <input TYPE="Radio" Name="Gender" Value="Homem">Homem
+    <input TYPE="Radio" Name="Gender" Value="Mulher">Mulher
 
     <button>Enviar</button>
+
+    <br>
+
+    <div class="container"></div>
 
     <strong>Sua seleção especial</strong>
 
@@ -50,15 +100,42 @@
 
     <p>Quer que seus amigos também ganhem a lista personalizada deles? Preencha agora!</p>
 
-    <input type="">
-    <input type="">
 
-    <button>Enviar Agora</button>
+
+        <form method="post">
+            <input type="button" value="Send Email" onclick="sendEmail()"/>
+        </form>  
+
+   
     
     <!-- footer -->
     <footer>Testando suas habilidades em HTML, CSS e JS. Linx Impulse 2019</footer>
 
-    <div class="container"></div>
+    
     <script src="../script/ConsultAPI.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>  
 </body>
+
+
+<script>
+
+
+    function sendEmail() {
+
+			Email.send({
+				Host: "smtp.gmail.com",
+				Username : "AbnerWesley35@gmail.com",
+				Password : "@Abner38688066",
+				To : 'AbnerW_@hotmail.com',
+				From : "AbnerWesley35@gmail.com",
+				Subject : "teste",
+				Body : "opa teste",
+			})
+			.then(function(message){
+				alert("mail sent successfully")
+			});
+    }
+
+</script>
+
 </html>
