@@ -1,5 +1,11 @@
+
+let pageNumber = 0;
+
 function Get(){
-    fetch('https://frontend-intern-challenge-api.iurykrieger.vercel.app/products?page=1',{
+
+    pageNumber++;
+
+    fetch('https://frontend-intern-challenge-api.iurykrieger.vercel.app/products?page=' + pageNumber,{
         method: 'GET'
     })
 
@@ -11,24 +17,64 @@ function Get(){
 
         json.products.map(function(products){
             container.innerHTML += `
-                <span> `+ products.id +` </span><br>
-                <strong> `+ products.name +` </strong><br>
+            <div class="teste">
+                <div> 
+                <img class="image" src="https:` + products.image + `"> 
+                </div>
+                <br>
+                <span> `+ products.name +` </span><br>
                 <span> `+ products.description +` </span><br>
-                <div> <img src="https:` + products.image + `"> </div><br>
-                <span> De: R$`+ products.oldPrice +` </span>
-                <span> Por: R$ `+ products.price +` </span><br>
+                <span> De: R$`+ products.oldPrice +`,99</span>
+                <strong> Por: R$ `+ products.price +`,99 </strong><br>
+      
+                <button class="btn-buy">Comprar</button>
+            </div>
             `;
 
         });
 
     });
 }
+
 Get();
 
-function showProduct(product){
-
+function sendEmail(){
+    document.querySelector("form").addEventListener("submit", event => {
+        console.log("Enviou");
+    });
 }
 
-function Main(){
+function CustomValidation(event){
+    const field = event.target;
+
+    function verifyErrors(){
+        let foundError = false;
+
+        for(const error in field.validity){
+            if(error != "customError" && field.validity[error]){
+                foundError = error;
+            }
+        }
+
+        return foundError;
+    }
+
+    const error = verifyErrors();
+
+    if(error){
+        field.setCustomValidity("Campo Obrigatório");
+    } else {
+        field.setCustomValidity("");
+    }
+}
+
+function validadeFields(){
+    const fields = document.querySelectorAll("[required]");
+
+    for (field of fields){
+        field.addEventListener("invalid", CustomValidation);
+    }
+}
+
+
     
-}

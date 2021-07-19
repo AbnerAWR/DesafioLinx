@@ -5,137 +5,121 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="../css/style.css" />
 </head>
 
-<style>
-
-    header {
-        background: #707070 0% 0% no-repeat padding-box;
-        border: 1px solid #707070;
-        opacity: 1;
-    }
-
-    footer {
-        margin-top: 50px;
-        height: 293px; 
-        background: #707070 0% 0% no-repeat padding-box;
-        border: 1px solid #707070;
-        opacity: 1;
-    }
-
-    a.button {
-    -webkit-appearance: button;
-    -moz-appearance: button;
-    appearance: button;
-
-    text-decoration: none;
-    color: initial;
-}
-
-
-</style>
-
 <header class="header">
-    <p>uma seleção de produtos</p>
 
-    <h1>especial para você</h1>
+    <div>
+        <p>uma seleção de produtos</p>
 
-    <p>Todos os produtos desta lista foram selecionados a partir da sua navegação. Aproveite!</p>
+        <h1>especial para você</h1>
+    
+        <p>Todos os produtos desta lista foram selecionados a partir da sua navegação. Aproveite!</p>
+    </div>    
 
-    <button onclick="location.href='https://www.linx.com.br/quem-somos/'" type="button">Conheça a Linx</button>
-    <a href="#id-ajudeOAlgoritimo">Ajude o algorítimo</a>
-    <a href="#id-seusProdutos">Seus produtos</a>
-    <a href="#id-compartilhe">Compartilhe</a>
-
+            <nav class="menu">
+                <ul>
+                <li><a class="btn" href="https://www.linx.com.br/quem-somos/" target="_blank">Conheça a Linx</a></li>
+                <li><a class="btn" href="#id-ajudeOAlgoritimo">Ajude o algorítimo</a></li>
+                <li><a class="btn" href="#id-seusProdutos">Seus produtos</a></li>
+                <li><a class="btn" href="#id-compartilhe">Compartilhe</a></li>
+                </ul>
+            </nav>      
 
 </header>
 <body>
 
-    <!-- Seguir
-    [x] CSS simples
-    [x] Funcionalidade de enviar email
-    [ ] Aparecer o produtos em grid
-    [ ] Botão mostrar mais
-    [ ] CSS Bonito
-    -->
+    <div class="body-help" id="id-ajudeOAlgoritimo">
+        <h5>Ajude o algorítimo a ser mais certeiro</h5>
 
-    <!-- corpo -->
-
-    <!-- GRID 2 -->
-    <h5>Ajude o algorítimo a ser mais certeiro</h5>
-
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ultricies tellus nec mi porta convallis sollicitudin eu urna. 
-    Mauris rhoncus erat sed interdum dignissim. Suspendisse semper pretium consectetur. 
-    Praesent bibendum arcu risus, sit amet iaculis ex tempus quis. Cras et erat ut tellus vulputate tincidunt. 
-    Aenean lacinia euismod augue vel egestas. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vestibulum vel urna tortor. 
-    Vivamus et arcu non felis tristique eleifend. Morbi eu condimentum urna. Curabitur eu magna eget turpis condimentum ultrices. 
-    Suspendisse quis lorem ultricies, pulvinar purus sed, egestas erat. Etiam ultricies a ante vehicula pharetra. 
-    Quisque ut neque mattis, consequat velit ut, ultrices orci. Nulla varius elementum erat vel pharetra. Aenean sit amet nisi diam. 
-    Morbi viverra, magna ac luctus commodo, odio ante suscipit libero, at mattis augue est vel metus.</p>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ultricies tellus nec mi porta convallis sollicitudin eu urna. 
+            Mauris rhoncus erat sed interdum dignissim. Suspendisse semper pretium consectetur. 
+            Praesent bibendum arcu risus, sit amet iaculis ex tempus quis. Cras et erat ut tellus vulputate tincidunt. 
+            Aenean lacinia euismod augue vel egestas. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vestibulum vel urna tortor. 
+            Vivamus et arcu non felis tristique eleifend. <br>
+            Morbi eu condimentum urna. Curabitur eu magna eget turpis condimentum ultrices. 
+            Suspendisse quis lorem ultricies, pulvinar purus sed, egestas erat. Etiam ultricies a ante vehicula pharetra. 
+            Quisque ut neque mattis, consequat velit ut, ultrices orci. Nulla varius elementum erat vel pharetra. Aenean sit amet nisi diam. 
+            Morbi viverra, magna ac luctus commodo, odio ante suscipit libero, at mattis augue est vel metus.
+        </p>
+    </div>
     
-    <p>Seu nome:</p>
-    <input type="">
-    <p>E-mail:</p>
-    <input type="">
-    <p>CPF:</p>
-    <input type="">
+    <form class="form" action="" method="post">
 
-    <input TYPE="Radio" Name="Gender" Value="Homem">Homem
-    <input TYPE="Radio" Name="Gender" Value="Mulher">Mulher
+        <div class=name> 
+            <label  for="name">Seu nome:</label><br>
+            <input type="">
+        </div>
 
-    <button>Enviar</button>
+        <div class="email">
+            <label  for="email">E-mail:</label><br>
+            <input type="">
+        </div>
 
-    <br>
+        <div class="cpf">
+            <label  for="name">CPF:</label><br>
+            <input type="">
+        </div>
+    
+        <div class="gender"></div>
+        <input  TYPE="Radio" Name="Gender" Value="Homem">Homem
+        <input  TYPE="Radio" Name="Gender" Value="Mulher">Mulher
+        <br>
+        <input class="btn-send" value="Enviar" type="submit">
 
-    <div class="container"></div>
+    </form>
 
-    <strong>Sua seleção especial</strong>
+    <br> 
 
+    <section class="products-section" id="id-seusProdutos">   
+
+        <strong>Sua seleção especial</strong>
+
+        <div class="container"></div>
+        
+        <br>
+        <br>
+        <input type="button" class="btn-more-send" onclick="Get()" value="Ainda mais produtos aqui!"></button>
+    </section>
     <!-- Cards de produtos aqui -->
-    <button>Comprar</button>
+  
 
-    <button>Ainda mais produtos aqui!</button>
-
-    <strong>Compartilhe a novidade</strong>
+    <strong id="id-compartilhe">Compartilhe a novidade</strong>
 
     <p>Quer que seus amigos também ganhem a lista personalizada deles? Preencha agora!</p>
 
-
-
-        <form method="post">
-            <input type="button" value="Send Email" onclick="sendEmail()"/>
+        <form method="post" action="">
+            <div>
+                <label>Nome do seu amigo: </label>
+                <input required type="text">
+                <span class="error"></span>
+                
+                <br>
+                <label>E-mail do seu amigo: </label>
+                <input required type="email">
+                <span class="error"></span>
+                <br>
+             
+                <button class="btn-more-send" type="submit" onclick="validadeFields()">Enviar agora</button>
+            </div>
         </form>  
-
-   
-    
+ 
     <!-- footer -->
-    <footer>Testando suas habilidades em HTML, CSS e JS. Linx Impulse 2019</footer>
+    <footer>
+        <div>
+            <p>
+                Testando suas habilidades em HTML, CSS e JS.<br>
+                Linx Impulse<br>
+                2019
+            </p>
+        </div>
+    </footer>
 
-    
+
     <script src="../script/ConsultAPI.js"></script>
     <script src="https://smtpjs.com/v3/smtp.js"></script>  
+
 </body>
-
-
-<script>
-
-
-    function sendEmail() {
-
-			Email.send({
-				Host: "smtp.gmail.com",
-				Username : "AbnerWesley35@gmail.com",
-				Password : "@Abner38688066",
-				To : 'AbnerW_@hotmail.com',
-				From : "AbnerWesley35@gmail.com",
-				Subject : "teste",
-				Body : "opa teste",
-			})
-			.then(function(message){
-				alert("mail sent successfully")
-			});
-    }
-
-</script>
-
 </html>

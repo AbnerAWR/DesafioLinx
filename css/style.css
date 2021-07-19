@@ -1,0 +1,180 @@
+* {
+    font-family: Helvetica;
+    outline: none;
+}
+
+/* Header */
+header {
+    background: #707070 0% 0% no-repeat padding-box;
+    border: 1px solid #707070;
+}
+
+header p{
+    text-align: center;
+    font: normal normal normal 14px/16px;
+    color: #FFFFFF;
+}
+
+h1{
+    text-align: center;    
+    letter-spacing: 0px;
+    color: #FFFFFF;
+}
+
+header nav{
+    justify-content: space-between;
+}
+
+header .menu{
+    display: flex;
+}
+
+
+header nav a{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+header.menu{
+    width: 100px;
+    margin: 10px;
+    text-align: center;
+    line-height: 75px;
+    font-size: 30px;
+}
+
+
+ul li{
+    list-style: none;
+}
+
+a{
+    color: #888888;
+}
+
+a.btn{
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border-radius: 4px;
+    text-align: center;
+    border: 0%;
+    display: block;
+    padding: 10px 40px;
+    text-decoration: none;
+}
+a.btn:hover{
+    text-decoration: none;
+    background-color: #00000029;
+    color: #fff;
+}
+
+
+/* Body */
+
+div.body-help h5{
+    text-align: left;
+    font-size: 20px;
+    letter-spacing: 0px;
+    color: #888888;
+    opacity: 1;
+}
+
+div.body-help p{
+    text-align: left;
+    font-size: 12px;
+    letter-spacing: 0px;
+    color: #888888;
+}
+
+form label{
+    font: "Helvetica Neue";
+    font-size: 12px;
+    text-align: left;
+
+    letter-spacing: 0px;
+    color: #888888;
+}
+
+form div input{
+    top: 441px;
+    left: 870px;
+    width: 340px;
+    height: 30px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid #707070;
+    margin-bottom: 2rem;
+    
+}
+
+.btn-send{
+    top: 670px;
+    left: 870px;
+    width: 340px;
+    height: 39px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid #707070;
+    border-radius: 4px;
+}
+
+.btn-more-send{
+    margin-top: 40px;
+	width: 300px;
+	font-size: 18px;
+    margin-top: 30px;
+	text-align: center;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.products-section .container .teste{
+    display: inline;
+}
+
+.btn-buy{
+    top: 1180px;
+    left: 286px;
+    width: 200px;
+    height: 30px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid #707070;
+    border-radius: 4px;
+}
+.products-section .container .image{
+    top: 860px;
+    left: 286px;
+    width: 200px;
+    height: 150px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid #707070;
+}
+
+
+
+/* Footer */
+footer {
+    margin-top: 50px;
+    height: 293px; 
+    background: #707070 0% 0% no-repeat padding-box;
+    border: 1px solid #707070;
+}
+
+footer {
+    
+display: table;
+width: calc(100% - 40px);
+transform: scale(1, -1); 
+}
+
+footer div {
+    margin: 30px 0 100px;
+}
+
+footer div p {
+    text-align: center;
+    transform: scale(1, -1);
+}
+
+
+
+
