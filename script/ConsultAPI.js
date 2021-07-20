@@ -17,17 +17,19 @@ function Get(){
 
         json.products.map(function(products){
             container.innerHTML += `
-            <div class="teste">
-                <div> 
-                <img class="image" src="https:` + products.image + `"> 
+            <div class="card">
+                <div class="image"> 
+                <img src="https:` + products.image + `"> 
                 </div>
                 <br>
+                <div class="info">
                 <span> `+ products.name +` </span><br>
                 <span> `+ products.description +` </span><br>
                 <span> De: R$`+ products.oldPrice +`,99</span>
                 <strong> Por: R$ `+ products.price +`,99 </strong><br>
-      
-                <button class="btn-buy">Comprar</button>
+
+                <input class="btn-buy" type="button" value="Comprar"/>
+                </div>
             </div>
             `;
 
