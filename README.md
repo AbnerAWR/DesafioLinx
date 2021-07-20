@@ -7,3 +7,6 @@
 --CSS onde mais tive dificuldade, devido ao fato de sempre usar frameworks como bootstrap, google materials e outros, o CSS puro foi mais dificil para executar.
 
 --Git tambem foi tranquilo pois é algo com que tenho contato todos os dias.
+
+
+Link aplicação: https://desafio-linx-alpha.vercel.app
