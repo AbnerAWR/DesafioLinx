@@ -151,31 +151,6 @@ input[type="Radio"]{
     width: 100%;
     margin-top: 30px;
 }
-/* 
-.products-section .container .teste{
-    display: inline;
-} */
-
-/* .btn-buy{
-    top: 1180px;
-    left: 286px;
-    width: 200px;
-    height: 30px;
-    background: #FFFFFF 0% 0% no-repeat padding-box;
-    border: 1px solid #707070;
-    border-radius: 4px;
-} */
-/* .products-section .container .image{
-    top: 860px;
-    left: 286px;
-    width: 200px;
-    height: 150px;
-    background: #FFFFFF 0% 0% no-repeat padding-box;
-    border: 1px solid #707070;
-} */
-
-/* Products cards */
-
 
 .products-section .line{
     display: flex;
