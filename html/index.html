@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="../css/style.css" />
 </head>
 <body>
-
+    
     <header>
         <div class="background">
             <div class="text-header">
@@ -29,7 +29,7 @@
             </nav>      
         </div>
     </header>
-
+    <div  class="col-100">
     <div class="body-help col-60" id="id-ajudeOAlgoritimo">
         <h5>Ajude o algorítimo a ser mais certeiro</h5>
 
@@ -46,7 +46,7 @@
         </p>
     </div>
     
-    <form class="form" action="" method="post">
+    <form class="form col-40" action="" method="post">
 
         <div class=name> 
             <label  for="name">Seu nome:</label><br>
@@ -59,7 +59,7 @@
         </div>
 
         <div class="cpf">
-            <label  for="name">CPF:</label><br>
+            <label  for="cpf">CPF:</label><br>
             <input type="">
         </div>
     
@@ -70,42 +70,53 @@
         <input class="btn-send" value="Enviar" type="submit">
 
     </form>
-
+</div>
     <br> 
+    
+        <section class="products-section col-100" id="id-seusProdutos">   
+            <div class="line">
+                <hr />
+                <h3>Sua seleção especial</h3>
+            </div>
 
-    <section class="products-section" id="id-seusProdutos">   
+            <div class="container">
+    
+            </div>
+            <br>
+            <div class="button-align">
 
-        <strong>Sua seleção especial</strong>
-
-        <div class="container"></div>
+                <input type="button" class="btn-more-send" onclick="Get()" value="Ainda mais produtos aqui!"></button>
+            </div>
+        </section>
+        <!-- Cards de produtos aqui -->
+ 
+    <section class="share-section col-100">
+        <div class="line-footer">
+            <hr/>
+            <h3 id="id-compartilhe">Compartilhe a novidade</h3>
+        </div>
         
-        <br>
-        <br>
-        <input type="button" class="btn-more-send" onclick="Get()" value="Ainda mais produtos aqui!"></button>
-    </section>
-    <!-- Cards de produtos aqui -->
-  
-
-    <strong id="id-compartilhe">Compartilhe a novidade</strong>
-
-    <p>Quer que seus amigos também ganhem a lista personalizada deles? Preencha agora!</p>
-
+        <p>Quer que seus amigos também ganhem a lista personalizada deles? Preencha agora!</p>
+        
         <form method="post" action="">
-            <div>
-                <label>Nome do seu amigo: </label>
+            <div class="name col-50">
+                <label>Nome do seu amigo: </label><br>
                 <input required type="text">
                 <span class="error"></span>
-                
-                <br>
-                <label>E-mail do seu amigo: </label>
+            </div>
+            <div class="email col-50">
+                <label>E-mail do seu amigo: </label><br>
                 <input required type="email">
                 <span class="error"></span>
                 <br>
-             
-                <button class="btn-more-send" type="submit" onclick="validadeFields()">Enviar agora</button>
             </div>
+                <div class="button-align">
+                    <input type="submit" class="btn-send" onclick="validadeFields()" value="Enviar agora">
+                </div>
+                
         </form>  
- 
+    </section>
+        
     <!-- footer -->
     <footer>
         <div>

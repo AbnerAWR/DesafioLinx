@@ -25,8 +25,10 @@ function Get(){
                 <div class="info">
                 <span> `+ products.name +` </span><br>
                 <span> `+ products.description +` </span><br>
-                <span> De: R$`+ products.oldPrice +`,99</span>
+                <span> De: R$`+ products.oldPrice +`,99</span><br>
                 <strong> Por: R$ `+ products.price +`,99 </strong><br>
+                <p>ou ` + products.installments.count +` x de 
+                R$ `+ products.installments.value.toFixed(2).replace(".", ",") +` </p><br>
 
                 <input class="btn-buy" type="button" value="Comprar"/>
                 </div>

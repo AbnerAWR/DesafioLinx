@@ -1,9 +1,19 @@
+html, body {
+	height: 100%;
+	width: 100%;
+	margin: 0;
+	min-width: 325px;
+	font-size: 14px;
+	color: #888;
+}
+
 * {
     outline: none;
     padding: 0;
     margin: 0;
     list-style-type: none;
     text-decoration: none;
+    box-sizing: border-box;
     font-family:'Helvetica Neue', Helvetica, sans-serif;
 }
 
@@ -59,11 +69,6 @@ header nav ul li{
    margin-left: 40px;
 }
 
-header nav ul li .btn{
-    width: 130px;
-	/* filter: drop-shadow(2px 2px 2px #888); */
-}
-
 a{
     color: #888888;
 }
@@ -85,39 +90,46 @@ a.btn:hover{
 
 /* Body */
 
-div.body-help h5{
+.body-help h5{
     text-align: left;
     font-size: 20px;
     letter-spacing: 0px;
     color: #888888;
     opacity: 1;
+    padding-left: 290px;
+    padding-right: 220px;
+    margin-bottom: 1.4rem;
 }
 
-div.body-help p{
+.body-help p{
     text-align: left;
     font-size: 12px;
+    padding-left: 290px;
+    padding-right: 220px;
     letter-spacing: 0px;
     color: #888888;
+    line-height: 1.125rem;
 }
 
 form label{
     font: "Helvetica Neue";
     font-size: 12px;
     text-align: left;
-
     letter-spacing: 0px;
     color: #888888;
 }
 
 form div input{
-    top: 441px;
-    left: 870px;
     width: 340px;
     height: 30px;
     background: #FFFFFF 0% 0% no-repeat padding-box;
     border: 1px solid #707070;
     margin-bottom: 2rem;
-    
+    padding: 2px;
+}
+
+input[type="Radio"]{
+    margin-bottom: 1.6rem;
 }
 
 .btn-send{
@@ -139,12 +151,12 @@ form div input{
     width: 100%;
     margin-top: 30px;
 }
-
+/* 
 .products-section .container .teste{
     display: inline;
-}
+} */
 
-.btn-buy{
+/* .btn-buy{
     top: 1180px;
     left: 286px;
     width: 200px;
@@ -152,71 +164,176 @@ form div input{
     background: #FFFFFF 0% 0% no-repeat padding-box;
     border: 1px solid #707070;
     border-radius: 4px;
-}
-.products-section .container .image{
+} */
+/* .products-section .container .image{
     top: 860px;
     left: 286px;
     width: 200px;
     height: 150px;
     background: #FFFFFF 0% 0% no-repeat padding-box;
     border: 1px solid #707070;
-}
+} */
 
 /* Products cards */
-@media (min-width: 540px){
-header div.section-header {
-    text-align: center;
+
+
+.products-section .line{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font: bold 1.8rem/1.6rem "Helvetica Neue";
+    position: relative;
+    margin-bottom: .8rem;
+    margin-top: 79px;
+}
+
+.line hr{
+    left: 0rem;
+    width: 100%;
+    z-index: -1;
+    position: absolute;
+}
+
+.line h3 {
+    background: white;
+    padding: 0rem 1.0rem;
 }
 
 .products-section .container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin: 0rem auto 3.0rem;
+    margin-left: 286px;
 }
-.products-section .container .card{
-    padding: 0rem 1.0rem;
-    margin: 1.5rem auto;
-    flex-direction: column;
-    min-width: 21.0rem;
-    max-width: 22.0rem;
-    height: 35.0rem;
-}
+
 .products-section .container .card .image{
-    width: 100%;
-    height: 15.0rem;
-    margin-right: 0rem;
-    margin-bottom: 1.7rem;
+    width: 13.5rem;
+    height: 12.9rem;
+    margin-right: 1.2rem;
+    padding: .2rem;
+    text-align: center;
+    border: 1px solid #707070;
 }
   
 .products-section .container .card .info{
-    width: 100%;
-    height: 19.46rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: calc(100% - 14.7rem);
+}
+
+.products-section .container .card{
+    padding: 1.5rem 0rem;
+    flex-direction: column;
+    display: table;
+    max-width: 34.0rem;
+    margin: 0rem auto;
+    flex: 1 1 20.0rem;
+}
+
+.products-section .container .card .image img{
+    height: 98%;
 }
 
 .products-section .container .card .info p:nth-of-type(1){
     display: initial;
 }
 
-
-
+.products-section .btn-buy{
+    cursor: pointer;
+    top: 1180px;
+    left: 286px;
+    width: 200px;
+    height: 3rem;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid #707070;
+    border-radius: 4px;
+    color: #707070;
 }
 
+.products-section .button-align{
+    text-align: center;
+}
 
+.products-section input{
+    width: 26.0rem;
+    height: 3.9rem;
+    background: white;
+    color: #707070;
+    border: .1rem solid #707070;
+    border-radius: .4rem;
+    cursor: pointer;
+}
+
+.products-section input:hover{
+    background: #707070;
+    color: #FFFFFF;
+}
+
+.share-section .line-footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font: bold 1.8rem/1.6rem "Helvetica Neue";
+    position: relative;
+    margin-bottom: .8rem;
+    margin-top: 79px;
+}
+
+.line-footer hr{
+    left: 0rem;
+    width: 100%;
+    z-index: -1;
+    position: absolute;
+}
+
+.line-footer h3 {
+    background: white;
+    padding: 0rem 1.0rem;
+}
+
+.share-section .btn-send{
+    width: 26.0rem;
+    height: 3.9rem;
+    background: white;
+    color: #707070;
+    border: .1rem solid #707070;
+    border-radius: .4rem;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.share-section  .btn-send:hover{
+    background: #707070;
+    color: #FFFFFF;
+}
+
+.share-section .button-align{
+    text-align: center;
+}
+
+.share-section p{
+    margin-top: 44px;
+    align-items: center;
+    text-align: center;
+}
+
+.share-section .name{
+    padding-left: 390px;
+    margin-top: 60px;
+}
+
+.share-section .email{
+    margin-top: 60px;
+}
 
 /* Footer */
 footer {
-    margin-top: 50px;
-    height: 293px; 
-    background: #707070 0% 0% no-repeat padding-box;
-    border: 1px solid #707070;
-}
-
-footer {
-    
-display: table;
-width: calc(100% - 40px);
-transform: scale(1, -1); 
+    background: #707070;
+    display: table;
+    width: 100%;
+    transform: scale(1, -1); 
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 70%);
 }
 
 footer div {
@@ -226,10 +343,11 @@ footer div {
 footer div p {
     text-align: center;
     transform: scale(1, -1);
+    color: #FFFFFF;
 }
 
 /* COLUMNS */
-.col-25, .col-40, .col-50, .col-60 {
+.col-25, .col-40, .col-50, .col-60, .col-100, .col-80{
 	display: table;
 	float: left;
 	margin: 0 2%;
@@ -253,6 +371,14 @@ footer div p {
 .col-60 {
 	width: 56%;
 	/* Makes width 60% with the margin from above */
+}
+
+.col-100{
+    width: 92%;
+}
+
+.col-80{
+    width: 80%;
 }
 
 
